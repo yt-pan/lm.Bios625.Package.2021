@@ -5,6 +5,7 @@ test_that("multiplication works", {
   y = 1:3
   x = 1:3
   expect_warning(lm_s(y~x))
+  expect_equal(lm_s(y),-1)
   y=1:2
   x=1:2
   z=1:2

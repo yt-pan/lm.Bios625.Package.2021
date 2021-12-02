@@ -116,10 +116,10 @@ lm_s = function(formula, data) {
     rq = if (length(dim(re)) == 2)
       structure(apply(t(re), 1L, quantile),
                 dimnames = list(nam, dimnames(re)[[2]]))
-    else  {
-      zz = zapsmall(quantile(re), digits + 1)
-      structure(zz, names = nam)
-    }
+    #else  {
+    #  zz = zapsmall(quantile(re), digits + 1)
+    #  structure(zz, names = nam)
+    #}
     print(t(rq), digits = digits)
   }
   else if (rdf > 0) {
