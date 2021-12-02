@@ -44,10 +44,6 @@ lm_s = function(formula, data) {
   else if (ncol(xy)>2){
     X = data.matrix(cbind(rep(1,n),xy[,2:ncol(xy)]))
   }
-  else{
-    print("Input should have at least two variables.")
-    return(-1)
-  }
   p = ncol(X)
   a = try(solve(t(X)%*%X),silent=T)
   if (!is.matrix(a)){
