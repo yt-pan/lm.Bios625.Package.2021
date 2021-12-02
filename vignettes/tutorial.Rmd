@@ -1,0 +1,60 @@
+---
+title: "Tutorial for lm_s"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The myRfunclm package only contains the lm_s function. It will fit a linear model using given data set and will automatically print summary of coefficients and anova table of the model. This is a mimic of the lm function in the basic R language.
+This vignette shows how to use this function and compare it with the original R function.
+
+To begin, we'll load package and build sample data set.
+
+```{r setup}
+library(myRfunclm)
+set.seed(1010)
+y = rnorm(1000)
+x = matrix(rnorm(3000),1000,3)
+data(mtcars)
+d = mtcars
+```
+
+## `lm_s(formula, data)` : Fit linear model and print the summary of coefficients and anova table.
+
+### Fit simple regression model:
+```{r}
+m = lm_s(y~x[,1])
+```
+Compared with the R lm function:
+```{r}
+m = lm(y~x[,1])
+summary(m)
+anova(m)
+```
+
+### Fit mutiple regression model:
+
+```{r}
+m = lm_s(y~x[,1]+x[,2]+x[,3])
+```
+Compared with the R lm function:
+```{r}
+m = lm(y~x[,1]+x[,2]+x[,3])
+summary(m)
+anova(m)
+```
+
+### Fit model form data set:
+```{r}
+m = lm_s(mpg~hp+wt,data = d)
+```
+
