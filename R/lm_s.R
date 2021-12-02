@@ -17,6 +17,7 @@
 #'lm_s(y ~ x)
 #'lm_s(y ~ x+z)
 #'
+#'@import stats
 #'@export
 #'lm_s
 

@@ -1,8 +1,8 @@
 ---
-title: "Tutorial for lm_s"
+title: "tutorial"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Tutorial}
+  %\VignetteIndexEntry{tutorial}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -20,7 +20,7 @@ This vignette shows how to use this function and compare it with the original R 
 To begin, we'll load package and build sample data set.
 
 ```{r setup}
-library(myRfunclm)
+library(lm.Bios625.Package.2021)
 set.seed(1010)
 y = rnorm(1000)
 x = matrix(rnorm(3000),1000,3)
