@@ -16,7 +16,6 @@ The function returns the Coefficients' matrix which contain the value, S.E, t-st
 }
 \description{
 The lm_s function will fit a linear model using given data set. It will automatically print summary of coefficients and anova table of the model.
-The function can treat NA with different action.
 The function may not treat interaction terms correctly and cannot fit a model without an intercept properly.
 }
 \examples{
