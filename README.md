@@ -22,7 +22,7 @@ m = lm_s(mpg ~ hp+wt,data = d)
 ![image](https://github.com/yt-pan/lm.Bios625.Package.2021/blob/main/Img/lm_s.png)
 
 ### Correctness:
-We can compare the result of `lm_s()` and `lm()`.
+We can compare the result of above `lm_s()` and below `lm()`. They are identical.
 ```{r}
 n = lm(mpg ~ hp+wt,data = d)
 summary(n)
